@@ -9,7 +9,6 @@ import UIKit
 
 class HolidayViewController: UIViewController {
     
-//    var holidayList: [Holiday]
     var viewModel: HolidayViewModel = HolidayViewModel()
     
     private lazy var screen: HolidayScreen = {
@@ -17,15 +16,6 @@ class HolidayViewController: UIViewController {
         screen.translatesAutoresizingMaskIntoConstraints = false
         return screen
     }()
-    
-//    init(holidayList: [Holiday]) {
-//        self.holidayList = holidayList
-//        super.init(nibName: nil, bundle: nil)
-//    }
-    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
@@ -42,7 +32,6 @@ class HolidayViewController: UIViewController {
         self.screen.delegate(delegate: self)
         self.screen.configCollectionView(delegate: self, datasource: self)
     }
-    
 }
 
 extension HolidayViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
