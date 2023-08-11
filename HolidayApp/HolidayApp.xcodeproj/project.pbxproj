@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5065E6A42A867CCE00D3B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6A32A867CCE00D3B08C /* AppDelegate.swift */; };
 		5065E6A62A867CCE00D3B08C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6A52A867CCE00D3B08C /* SceneDelegate.swift */; };
-		5065E6A82A867CCE00D3B08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6A72A867CCE00D3B08C /* ViewController.swift */; };
+		5065E6A82A867CCE00D3B08C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6A72A867CCE00D3B08C /* HomeViewController.swift */; };
 		5065E6AD2A867CCF00D3B08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5065E6AC2A867CCF00D3B08C /* Assets.xcassets */; };
 		5065E6B02A867CCF00D3B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5065E6AE2A867CCF00D3B08C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		5065E6A02A867CCE00D3B08C /* HolidayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5065E6A32A867CCE00D3B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5065E6A52A867CCE00D3B08C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5065E6A72A867CCE00D3B08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5065E6A72A867CCE00D3B08C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5065E6AC2A867CCF00D3B08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5065E6AF2A867CCF00D3B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5065E6B12A867CCF00D3B08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +54,46 @@
 		5065E6A22A867CCE00D3B08C /* HolidayApp */ = {
 			isa = PBXGroup;
 			children = (
-				5065E6A32A867CCE00D3B08C /* AppDelegate.swift */,
-				5065E6A52A867CCE00D3B08C /* SceneDelegate.swift */,
-				5065E6A72A867CCE00D3B08C /* ViewController.swift */,
-				5065E6AC2A867CCF00D3B08C /* Assets.xcassets */,
-				5065E6AE2A867CCF00D3B08C /* LaunchScreen.storyboard */,
+				5065E6B72A867EAC00D3B08C /* Resources */,
+				5065E6B82A867EB800D3B08C /* Home */,
 				5065E6B12A867CCF00D3B08C /* Info.plist */,
 			);
 			path = HolidayApp;
+			sourceTree = "<group>";
+		};
+		5065E6B72A867EAC00D3B08C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6A32A867CCE00D3B08C /* AppDelegate.swift */,
+				5065E6A52A867CCE00D3B08C /* SceneDelegate.swift */,
+				5065E6AC2A867CCF00D3B08C /* Assets.xcassets */,
+				5065E6AE2A867CCF00D3B08C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5065E6B82A867EB800D3B08C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6BA2A867EC700D3B08C /* Screen */,
+				5065E6B92A867EBD00D3B08C /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5065E6B92A867EBD00D3B08C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6A72A867CCE00D3B08C /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5065E6BA2A867EC700D3B08C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5065E6A82A867CCE00D3B08C /* ViewController.swift in Sources */,
+				5065E6A82A867CCE00D3B08C /* HomeViewController.swift in Sources */,
 				5065E6A42A867CCE00D3B08C /* AppDelegate.swift in Sources */,
 				5065E6A62A867CCE00D3B08C /* SceneDelegate.swift in Sources */,
 			);
