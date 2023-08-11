@@ -20,6 +20,8 @@
 		5065E6CA2A868E6400D3B08C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6C92A868E6400D3B08C /* HomeService.swift */; };
 		5065E6CD2A86924200D3B08C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6CC2A86924200D3B08C /* Alert.swift */; };
 		5065E6CF2A8693DF00D3B08C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6CE2A8693DF00D3B08C /* UIView+Extension.swift */; };
+		5065E6D52A86948100D3B08C /* HolidayScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6D42A86948100D3B08C /* HolidayScreen.swift */; };
+		5065E6D72A86949E00D3B08C /* HolidayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6D62A86949E00D3B08C /* HolidayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		5065E6C92A868E6400D3B08C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		5065E6CC2A86924200D3B08C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		5065E6CE2A8693DF00D3B08C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5065E6D42A86948100D3B08C /* HolidayScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayScreen.swift; sourceTree = "<group>"; };
+		5065E6D62A86949E00D3B08C /* HolidayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,7 @@
 				5065E6CB2A86922100D3B08C /* Alert */,
 				5065E6C32A868C8C00D3B08C /* Model */,
 				5065E6BD2A8683DA00D3B08C /* Extension */,
-				5065E6B82A867EB800D3B08C /* Home */,
+				5065E6D02A86940600D3B08C /* Features */,
 				5065E6B12A867CCF00D3B08C /* Info.plist */,
 			);
 			path = HolidayApp;
@@ -160,6 +164,40 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		5065E6D02A86940600D3B08C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6B82A867EB800D3B08C /* Home */,
+				5065E6D12A86941000D3B08C /* Holidays */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		5065E6D12A86941000D3B08C /* Holidays */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6D32A86945500D3B08C /* Controller */,
+				5065E6D22A86944F00D3B08C /* Screen */,
+			);
+			path = Holidays;
+			sourceTree = "<group>";
+		};
+		5065E6D22A86944F00D3B08C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6D42A86948100D3B08C /* HolidayScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		5065E6D32A86945500D3B08C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6D62A86949E00D3B08C /* HolidayViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5065E6D52A86948100D3B08C /* HolidayScreen.swift in Sources */,
 				5065E6CF2A8693DF00D3B08C /* UIView+Extension.swift in Sources */,
 				5065E6BC2A867F1100D3B08C /* HomeScreen.swift in Sources */,
 				5065E6C22A8685B800D3B08C /* HomeViewModel.swift in Sources */,
@@ -239,6 +278,7 @@
 				5065E6A42A867CCE00D3B08C /* AppDelegate.swift in Sources */,
 				5065E6CA2A868E6400D3B08C /* HomeService.swift in Sources */,
 				5065E6A62A867CCE00D3B08C /* SceneDelegate.swift in Sources */,
+				5065E6D72A86949E00D3B08C /* HolidayViewController.swift in Sources */,
 				5065E6CD2A86924200D3B08C /* Alert.swift in Sources */,
 				5065E6BF2A86840200D3B08C /* UIColor+Extension.swift in Sources */,
 			);
