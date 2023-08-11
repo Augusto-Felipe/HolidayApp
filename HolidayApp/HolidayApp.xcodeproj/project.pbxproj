@@ -17,6 +17,7 @@
 		5065E6C22A8685B800D3B08C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6C12A8685B800D3B08C /* HomeViewModel.swift */; };
 		5065E6C52A868CA400D3B08C /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6C42A868CA400D3B08C /* Holiday.swift */; };
 		5065E6C72A868CDF00D3B08C /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6C62A868CDF00D3B08C /* CountryData.swift */; };
+		5065E6CA2A868E6400D3B08C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6C92A868E6400D3B08C /* HomeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5065E6C12A8685B800D3B08C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5065E6C42A868CA400D3B08C /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 		5065E6C62A868CDF00D3B08C /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		5065E6C92A868E6400D3B08C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		5065E6B82A867EB800D3B08C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5065E6C82A868E3300D3B08C /* Service */,
 				5065E6C02A86859700D3B08C /* ViewModel */,
 				5065E6BA2A867EC700D3B08C /* Screen */,
 				5065E6B92A867EBD00D3B08C /* Controller */,
@@ -133,6 +136,14 @@
 				5065E6C62A868CDF00D3B08C /* CountryData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5065E6C82A868E3300D3B08C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6C92A868E6400D3B08C /* HomeService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				5065E6C52A868CA400D3B08C /* Holiday.swift in Sources */,
 				5065E6A82A867CCE00D3B08C /* HomeViewController.swift in Sources */,
 				5065E6A42A867CCE00D3B08C /* AppDelegate.swift in Sources */,
+				5065E6CA2A868E6400D3B08C /* HomeService.swift in Sources */,
 				5065E6A62A867CCE00D3B08C /* SceneDelegate.swift in Sources */,
 				5065E6BF2A86840200D3B08C /* UIColor+Extension.swift in Sources */,
 			);
