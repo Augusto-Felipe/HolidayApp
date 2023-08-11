@@ -13,7 +13,7 @@ class HolidayCollectionViewCellScreen: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 22
-        view.backgroundColor = .appLightGreen
+        view.backgroundColor = .appLightSalmon
         view.setCardShadow()
         return view
     }()

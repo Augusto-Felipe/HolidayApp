@@ -27,6 +27,10 @@ class HolidayViewController: UIViewController {
 //        fatalError("init(coder:) has not been implemented")
 //    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func loadView() {
         self.screen = HolidayScreen()
         self.view = screen
@@ -35,6 +39,7 @@ class HolidayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        self.screen.delegate(delegate: self)
         self.screen.configCollectionView(delegate: self, datasource: self)
     }
     
@@ -58,5 +63,11 @@ extension HolidayViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+}
+
+extension HolidayViewController: HolidayScreenProtocol {
+    func backTapped() {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

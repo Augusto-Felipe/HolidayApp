@@ -7,13 +7,31 @@
 
 import UIKit
 
+protocol HolidayScreenProtocol: AnyObject {
+    func backTapped()
+}
+
 class HolidayScreen: UIView {
+    
+    var delegate: HolidayScreenProtocol?
+    
+    public func delegate(delegate: HolidayScreenProtocol) {
+        self.delegate = delegate
+    }
     
     lazy var navigationBarView: UIView = {
        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .appLightGreen
         return view
+    }()
+    
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "back"), for: .normal)
+        button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        return button
     }()
     
     lazy var navigationTitleLabel: UILabel = {
@@ -43,6 +61,10 @@ class HolidayScreen: UIView {
         collectionView.delegate = delegate
         collectionView.dataSource = datasource
     }
+    
+    @objc func backButtonTapped() {
+        self.delegate?.backTapped()
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,6 +79,7 @@ class HolidayScreen: UIView {
     private func configSuperView() {
         addSubview(navigationBarView)
         navigationBarView.addSubview(navigationTitleLabel)
+        navigationBarView.addSubview(backButton)
         addSubview(collectionView)
     }
     
@@ -69,6 +92,11 @@ class HolidayScreen: UIView {
             
             navigationTitleLabel.centerXAnchor.constraint(equalTo: navigationBarView.centerXAnchor),
             navigationTitleLabel.centerYAnchor.constraint(equalTo: navigationBarView.centerYAnchor, constant: 20),
+            
+            backButton.centerYAnchor.constraint(equalTo: navigationTitleLabel.centerYAnchor),
+            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            backButton.heightAnchor.constraint(equalToConstant: 40),
+            backButton.widthAnchor.constraint(equalToConstant: 40),
             
             collectionView.topAnchor.constraint(equalTo: navigationBarView.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
