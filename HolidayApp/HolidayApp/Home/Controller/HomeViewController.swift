@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     }()
     
     private var viewModel: HomeViewModel = HomeViewModel()
-    private alert: Alert?
+    private var alert: Alert?
     
     override func loadView() {
         self.screen = HomeScreen()
@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.alert = Alert(controller: self)
         self.viewModel.delegate(delegate: self)
         self.screen.delegate(delegate: self)
         self.screen.configPickerViewDelegate(dataSource: self, delegate: self)
