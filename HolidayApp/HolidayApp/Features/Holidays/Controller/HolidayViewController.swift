@@ -46,7 +46,7 @@ extension HolidayViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: HolidaysCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HolidaysCollectionViewCell.identifier, for: indexPath) as? HolidaysCollectionViewCell
+        let cell: HolidayCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HolidayCollectionViewCell.identifier, for: indexPath) as? HolidayCollectionViewCell
         cell?.setupCell(holiday: holidayList[indexPath.row])
         return cell ?? UICollectionViewCell()
     }

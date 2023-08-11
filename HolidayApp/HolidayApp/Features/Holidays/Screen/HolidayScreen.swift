@@ -31,7 +31,7 @@ class HolidayScreen: UIView {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = .clear
-//        cv.register(HolidaysCollectionViewCell.self, forCellWithReuseIdentifier: HolidaysCollectionViewCell.identifier)
+        cv.register(HolidayCollectionViewCell.self, forCellWithReuseIdentifier: HolidayCollectionViewCell.identifier)
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 24, bottom: 0, right: 24)
         layout.scrollDirection = .vertical
