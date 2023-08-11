@@ -66,8 +66,8 @@
 		5065E6A22A867CCE00D3B08C /* HolidayApp */ = {
 			isa = PBXGroup;
 			children = (
-				5065E6C32A868C8C00D3B08C /* Model */,
 				5065E6B72A867EAC00D3B08C /* Resources */,
+				5065E6C32A868C8C00D3B08C /* Model */,
 				5065E6BD2A8683DA00D3B08C /* Extension */,
 				5065E6B82A867EB800D3B08C /* Home */,
 				5065E6B12A867CCF00D3B08C /* Info.plist */,

@@ -85,6 +85,11 @@ class HomeScreen: UIView {
         addSubview(searchButton)
     }
     
+    public func configPickerViewDelegate(dataSource: UIPickerViewDataSource, delegate: UIPickerViewDelegate) {
+        countryPickerView.delegate = delegate
+        countryPickerView.dataSource = dataSource
+    }
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             backgroundImageView.topAnchor.constraint(equalTo: topAnchor),

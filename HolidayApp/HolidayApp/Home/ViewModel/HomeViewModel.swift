@@ -15,6 +15,7 @@ protocol HomeViewModelProtocol: AnyObject {
 class HomeViewModel {
     
     private var holidayList: [Holiday] = []
+    private var service: HomeService = HomeService()
     
     var delegate: HomeViewModelProtocol?
     
@@ -40,6 +41,19 @@ class HomeViewModel {
             return selectedCountryData["name"]
         } else {
             return CountryData.years[row]
+        }
+    }
+    
+    public func fetchRequest(countryCode: String, year: String) {
+        let urlString: String = "https://date.nager.at/api/v3/publicholidays/\(year)/\(countryCode)"
+        service.getHolidayList(urlString: urlString) { result in
+            switch result {
+            case .success(let holiday):
+                self.holidayList = holiday
+                self.delegate?.success()
+            case.failure(let error):
+                self.delegate?.error()
+            }
         }
     }
 }
