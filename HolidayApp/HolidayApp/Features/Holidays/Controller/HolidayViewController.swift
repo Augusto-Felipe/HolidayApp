@@ -51,7 +51,8 @@ extension HolidayViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let vc = HolidayDetailViewController(holiday: viewModel.loadCurrentHoliday(indexPath: indexPath))
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

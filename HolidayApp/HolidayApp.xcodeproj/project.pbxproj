@@ -25,6 +25,8 @@
 		5065E6DB2A86968900D3B08C /* HolidayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6DA2A86968900D3B08C /* HolidayCollectionViewCell.swift */; };
 		5065E6DD2A8696B900D3B08C /* HolidayCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6DC2A8696B900D3B08C /* HolidayCollectionViewCellScreen.swift */; };
 		5065E6E02A869C2000D3B08C /* HolidayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6DF2A869C2000D3B08C /* HolidayViewModel.swift */; };
+		50BA7EA02A86B02100EBA558 /* HolidayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA7E9F2A86B02100EBA558 /* HolidayDetailViewController.swift */; };
+		50BA7EA22A86B03A00EBA558 /* HolidayDetailViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA7EA12A86B03A00EBA558 /* HolidayDetailViewControllerScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		5065E6DA2A86968900D3B08C /* HolidayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCollectionViewCell.swift; sourceTree = "<group>"; };
 		5065E6DC2A8696B900D3B08C /* HolidayCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		5065E6DF2A869C2000D3B08C /* HolidayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewModel.swift; sourceTree = "<group>"; };
+		50BA7E9F2A86B02100EBA558 /* HolidayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayDetailViewController.swift; sourceTree = "<group>"; };
+		50BA7EA12A86B03A00EBA558 /* HolidayDetailViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayDetailViewControllerScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +110,8 @@
 			children = (
 				5065E6C82A868E3300D3B08C /* Service */,
 				5065E6C02A86859700D3B08C /* ViewModel */,
-				5065E6BA2A867EC700D3B08C /* Screen */,
 				5065E6B92A867EBD00D3B08C /* Controller */,
+				5065E6BA2A867EC700D3B08C /* Screen */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -175,6 +179,7 @@
 			children = (
 				5065E6B82A867EB800D3B08C /* Home */,
 				5065E6D12A86941000D3B08C /* Holidays */,
+				5065E6E22A86AC1800D3B08C /* HolidayDetail */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -229,6 +234,31 @@
 				5065E6DF2A869C2000D3B08C /* HolidayViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5065E6E22A86AC1800D3B08C /* HolidayDetail */ = {
+			isa = PBXGroup;
+			children = (
+				50BA7E9E2A86ADDE00EBA558 /* Controller */,
+				5065E6E32A86AC3F00D3B08C /* Screen */,
+			);
+			path = HolidayDetail;
+			sourceTree = "<group>";
+		};
+		5065E6E32A86AC3F00D3B08C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				50BA7EA12A86B03A00EBA558 /* HolidayDetailViewControllerScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		50BA7E9E2A86ADDE00EBA558 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50BA7E9F2A86B02100EBA558 /* HolidayDetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BA7EA22A86B03A00EBA558 /* HolidayDetailViewControllerScreen.swift in Sources */,
 				5065E6D52A86948100D3B08C /* HolidayScreen.swift in Sources */,
 				5065E6CF2A8693DF00D3B08C /* UIView+Extension.swift in Sources */,
 				5065E6BC2A867F1100D3B08C /* HomeScreen.swift in Sources */,
@@ -310,6 +341,7 @@
 				5065E6A82A867CCE00D3B08C /* HomeViewController.swift in Sources */,
 				5065E6E02A869C2000D3B08C /* HolidayViewModel.swift in Sources */,
 				5065E6DD2A8696B900D3B08C /* HolidayCollectionViewCellScreen.swift in Sources */,
+				50BA7EA02A86B02100EBA558 /* HolidayDetailViewController.swift in Sources */,
 				5065E6DB2A86968900D3B08C /* HolidayCollectionViewCell.swift in Sources */,
 				5065E6A42A867CCE00D3B08C /* AppDelegate.swift in Sources */,
 				5065E6CA2A868E6400D3B08C /* HomeService.swift in Sources */,
