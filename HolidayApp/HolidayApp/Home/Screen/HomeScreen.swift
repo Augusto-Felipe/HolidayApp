@@ -37,7 +37,6 @@ class HomeScreen: UIView {
         let pickerView = UIPickerView()
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.layer.cornerRadius = 12
-#warning("create color extension")
         pickerView.backgroundColor = .appLightGreen
         pickerView.setValue(UIColor.white, forKey: "textColor")
         return pickerView
@@ -47,7 +46,6 @@ class HomeScreen: UIView {
         let pickerView = UIPickerView()
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.layer.cornerRadius = 12
-#warning("create color extension")
         pickerView.backgroundColor = .appLightGreen
         pickerView.setValue(UIColor.white, forKey: "textColor")
         return pickerView
@@ -59,7 +57,6 @@ class HomeScreen: UIView {
         button.setTitle("Vamos", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.setTitleColor(.white, for: .normal)
-#warning("create color extension")
         button.backgroundColor = .appLightSalmon
         button.clipsToBounds = true
         button.layer.cornerRadius = 12
