@@ -9,7 +9,8 @@ import UIKit
 
 class HolidayViewController: UIViewController {
     
-    var holidayList: [Holiday]
+//    var holidayList: [Holiday]
+    var viewModel: HolidayViewModel = HolidayViewModel()
     
     private lazy var screen: HolidayScreen = {
         let screen = HolidayScreen()
@@ -17,14 +18,14 @@ class HolidayViewController: UIViewController {
         return screen
     }()
     
-    init(holidayList: [Holiday]) {
-        self.holidayList = holidayList
-        super.init(nibName: nil, bundle: nil)
-    }
+//    init(holidayList: [Holiday]) {
+//        self.holidayList = holidayList
+//        super.init(nibName: nil, bundle: nil)
+//    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func loadView() {
         self.screen = HolidayScreen()
@@ -42,17 +43,17 @@ class HolidayViewController: UIViewController {
 extension HolidayViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return holidayList.count
+        viewModel.numberOfItemsInSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HolidayCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: HolidayCollectionViewCell.identifier, for: indexPath) as? HolidayCollectionViewCell
-        cell?.setupCell(holiday: holidayList[indexPath.row])
+        cell?.setupCell(holiday: viewModel.loadCurrentHoliday(indexPath: indexPath))
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width - 25, height: 100)
+        viewModel.sizeForItemAt(collection: collectionView)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
