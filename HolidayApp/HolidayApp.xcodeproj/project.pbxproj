@@ -18,6 +18,7 @@
 		5065E6C52A868CA400D3B08C /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6C42A868CA400D3B08C /* Holiday.swift */; };
 		5065E6C72A868CDF00D3B08C /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6C62A868CDF00D3B08C /* CountryData.swift */; };
 		5065E6CA2A868E6400D3B08C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6C92A868E6400D3B08C /* HomeService.swift */; };
+		5065E6CD2A86924200D3B08C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5065E6CC2A86924200D3B08C /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5065E6C42A868CA400D3B08C /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 		5065E6C62A868CDF00D3B08C /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		5065E6C92A868E6400D3B08C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		5065E6CC2A86924200D3B08C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5065E6B72A867EAC00D3B08C /* Resources */,
+				5065E6CB2A86922100D3B08C /* Alert */,
 				5065E6C32A868C8C00D3B08C /* Model */,
 				5065E6BD2A8683DA00D3B08C /* Extension */,
 				5065E6B82A867EB800D3B08C /* Home */,
@@ -144,6 +147,14 @@
 				5065E6C92A868E6400D3B08C /* HomeService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		5065E6CB2A86922100D3B08C /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				5065E6CC2A86924200D3B08C /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +235,7 @@
 				5065E6A42A867CCE00D3B08C /* AppDelegate.swift in Sources */,
 				5065E6CA2A868E6400D3B08C /* HomeService.swift in Sources */,
 				5065E6A62A867CCE00D3B08C /* SceneDelegate.swift in Sources */,
+				5065E6CD2A86924200D3B08C /* Alert.swift in Sources */,
 				5065E6BF2A86840200D3B08C /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

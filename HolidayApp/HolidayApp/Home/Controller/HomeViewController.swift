@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     }()
     
     private var viewModel: HomeViewModel = HomeViewModel()
+    private alert: Alert?
     
     override func loadView() {
         self.screen = HomeScreen()
@@ -76,7 +77,7 @@ extension HomeViewController: HomeViewModelProtocol {
     }
     
     func error() {
-        
+        self.alert?.createAlert(title: "Erro", message: "Ano não suportado.")
     }
 }
 
