@@ -52,7 +52,6 @@ class HomeViewModel {
     public func fetchRequest(countryCode: String, year: String, requestType: RequestType) {
         let urlString: String = "https://date.nager.at/api/v3/publicholidays/\(year)/\(countryCode)"
         
-        
         switch requestType {
         case .Alamofire:
             service.getHolidayListAlamofire(url: urlString) { holidayList, error in
