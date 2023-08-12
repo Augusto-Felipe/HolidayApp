@@ -26,7 +26,7 @@ enum Onboarding: String {
 
 enum HomeScreenEnum: String {
     case backgroundImageName = "background"
-    case appLogoImageName = "logo"
+    case appLogoImageName = "logo2"
     case searchButtonTitle = "Pesquisar"
 }
 
