@@ -58,6 +58,6 @@ extension HolidayViewController: UICollectionViewDelegate, UICollectionViewDataS
 
 extension HolidayViewController: HolidayScreenProtocol {
     func backTapped() {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }

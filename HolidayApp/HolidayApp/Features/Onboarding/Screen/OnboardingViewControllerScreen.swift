@@ -59,7 +59,7 @@ class OnboardingViewControllerScreen: UIView {
         button.setTitle("Vamos", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .appLightGreen
+        button.backgroundColor = .appDarkBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 12
         button.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)

@@ -22,7 +22,7 @@ class HolidayDetailViewControllerScreen: UIView {
     lazy var navigationBarView: UIView = {
        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .appLightGreen
+        view.backgroundColor = .appLightBlue
         return view
     }()
     
@@ -48,7 +48,7 @@ class HolidayDetailViewControllerScreen: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        lb.textColor = .appLightGreen
+        lb.textColor = .appLightBlue
         lb.text = "Nome"
         lb.textAlignment = .center
         return lb
@@ -58,7 +58,7 @@ class HolidayDetailViewControllerScreen: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        lb.textColor = .appLightGreen
+        lb.textColor = .appLightBlue
         lb.text = "Nome Local"
         lb.textAlignment = .center
         return lb
@@ -68,7 +68,7 @@ class HolidayDetailViewControllerScreen: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        lb.textColor = .appLightGreen
+        lb.textColor = .appLightBlue
         lb.text = "Data"
         lb.textAlignment = .center
         return lb
@@ -77,7 +77,7 @@ class HolidayDetailViewControllerScreen: UIView {
     lazy var nameView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .appLightGreen
+        view.backgroundColor = .appDarkBlue
         view.layer.cornerRadius = 12
         return view
     }()
@@ -85,7 +85,7 @@ class HolidayDetailViewControllerScreen: UIView {
     lazy var localNameView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .appLightGreen
+        view.backgroundColor = .appDarkBlue
         view.layer.cornerRadius = 12
         return view
     }()
@@ -93,7 +93,7 @@ class HolidayDetailViewControllerScreen: UIView {
     lazy var dateView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .appLightGreen
+        view.backgroundColor = .appDarkBlue
         view.layer.cornerRadius = 12
         return view
     }()

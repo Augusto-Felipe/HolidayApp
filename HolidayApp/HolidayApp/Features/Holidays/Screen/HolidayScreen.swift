@@ -22,7 +22,7 @@ class HolidayScreen: UIView {
     lazy var navigationBarView: UIView = {
        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .appLightGreen
+        view.backgroundColor = .appLightBlue
         return view
     }()
     

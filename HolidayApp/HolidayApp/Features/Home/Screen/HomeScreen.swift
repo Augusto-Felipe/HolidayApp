@@ -29,7 +29,7 @@ class HomeScreen: UIView {
     lazy var appLogoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "appLogo")
+        imageView.image = UIImage(named: "logo")
         return imageView
     }()
     
@@ -37,7 +37,7 @@ class HomeScreen: UIView {
         let pickerView = UIPickerView()
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.layer.cornerRadius = 12
-        pickerView.backgroundColor = .appLightGreen
+        pickerView.backgroundColor = .appDarkBlue
         pickerView.setValue(UIColor.white, forKey: "textColor")
         return pickerView
     }()
@@ -46,7 +46,7 @@ class HomeScreen: UIView {
         let pickerView = UIPickerView()
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.layer.cornerRadius = 12
-        pickerView.backgroundColor = .appLightGreen
+        pickerView.backgroundColor = .appDarkBlue
         pickerView.setValue(UIColor.white, forKey: "textColor")
         return pickerView
     }()
@@ -57,7 +57,7 @@ class HomeScreen: UIView {
         button.setTitle("Vamos", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .appLightSalmon
+        button.backgroundColor = .appDarkBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 12
         button.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
@@ -97,7 +97,7 @@ class HomeScreen: UIView {
             backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            appLogoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 170),
+            appLogoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 210),
             appLogoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             appLogoImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
             appLogoImageView.heightAnchor.constraint(equalToConstant: 130),
