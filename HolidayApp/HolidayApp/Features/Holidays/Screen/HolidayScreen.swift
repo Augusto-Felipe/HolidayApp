@@ -29,7 +29,7 @@ class HolidayScreen: UIView {
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: Holidays.backButonImageName.rawValue), for: .normal)
+        button.setImage(UIImage(named: HolidayScreenEnum.backButonImageName.rawValue), for: .normal)
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -38,7 +38,7 @@ class HolidayScreen: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        lb.text = Holidays.navigationTitle.rawValue
+        lb.text = HolidayScreenEnum.navigationTitle.rawValue
         lb.textColor = UIColor.white
         lb.textAlignment = .center
         return lb

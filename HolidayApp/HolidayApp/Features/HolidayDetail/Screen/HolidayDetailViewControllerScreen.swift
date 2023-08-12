@@ -29,7 +29,7 @@ class HolidayDetailViewControllerScreen: UIView {
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "back"), for: .normal)
+        button.setImage(UIImage(named: DetailScreenEnum.backButtonImageName.rawValue), for: .normal)
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -38,7 +38,7 @@ class HolidayDetailViewControllerScreen: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        lb.text = "Detalhes"
+        lb.text = DetailScreenEnum.navigationTitle.rawValue
         lb.textColor = UIColor.white
         lb.textAlignment = .center
         return lb
@@ -49,7 +49,7 @@ class HolidayDetailViewControllerScreen: UIView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         lb.textColor = .appLightBlue
-        lb.text = "Nome"
+        lb.text = DetailScreenEnum.nameLabelText.rawValue
         lb.textAlignment = .center
         return lb
     }()
@@ -59,7 +59,7 @@ class HolidayDetailViewControllerScreen: UIView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         lb.textColor = .appLightBlue
-        lb.text = "Nome Local"
+        lb.text = DetailScreenEnum.localNameLabelText.rawValue
         lb.textAlignment = .center
         return lb
     }()
@@ -69,7 +69,7 @@ class HolidayDetailViewControllerScreen: UIView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         lb.textColor = .appLightBlue
-        lb.text = "Data"
+        lb.text = DetailScreenEnum.dateLabelText.rawValue
         lb.textAlignment = .center
         return lb
     }()

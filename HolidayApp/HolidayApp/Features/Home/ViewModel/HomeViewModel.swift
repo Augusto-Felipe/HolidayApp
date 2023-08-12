@@ -38,7 +38,7 @@ class HomeViewModel {
     public func titleForRow(pickerView: UIPickerView, row: Int, component: Int) -> String? {
         if component == 0 {
             let selectedCountryData = CountryData.countriesData[row]
-            return selectedCountryData["name"]
+            return selectedCountryData[DictionaryKeys.name.rawValue]
         } else {
             return CountryData.years[row]
         }

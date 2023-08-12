@@ -22,14 +22,14 @@ class HomeScreen: UIView {
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: Home.backgroundImageName.rawValue)
+        imageView.image = UIImage(named: HomeScreenEnum.backgroundImageName.rawValue)
         return imageView
     }()
     
     lazy var appLogoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: Home.appLogoImageName.rawValue)
+        imageView.image = UIImage(named: HomeScreenEnum.appLogoImageName.rawValue)
         return imageView
     }()
     
@@ -54,7 +54,7 @@ class HomeScreen: UIView {
     lazy var searchButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(Home.searchButtonTitle.rawValue, for: .normal)
+        button.setTitle(HomeScreenEnum.searchButtonTitle.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .appDarkBlue

@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     
     func configureInitialSelectedValues() {
         let initialCountryRow = screen.countryPickerView.selectedRow(inComponent: 0)
-        selectedCountryCode = CountryData.countriesData[initialCountryRow]["code"] ?? ""
+        selectedCountryCode = CountryData.countriesData[initialCountryRow][DictionaryKeys.code.rawValue] ?? ""
         
         let initialYearRow = screen.yearPickerView.selectedRow(inComponent: 0)
         selectedYear = CountryData.years[initialYearRow]
@@ -63,7 +63,7 @@ extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0 {
-            selectedCountryCode = CountryData.countriesData[row]["code"] ?? ""
+            selectedCountryCode = CountryData.countriesData[row][DictionaryKeys.code.rawValue] ?? ""
         } else if component == 1 {
             selectedYear = CountryData.years[row]
         }

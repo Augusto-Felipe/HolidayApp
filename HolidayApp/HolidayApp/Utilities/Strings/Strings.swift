@@ -24,19 +24,33 @@ enum Onboarding: String {
     case onboardingButtonTitle = "Vamos"
 }
 
-enum Home: String {
+enum HomeScreenEnum: String {
     case backgroundImageName = "background"
     case appLogoImageName = "logo"
     case searchButtonTitle = "Pesquisar"
 }
 
-enum Holidays: String {
+enum HolidayScreenEnum: String {
     case backButonImageName = "back"
     case navigationTitle = "Feriados"
 }
 
+enum DetailScreenEnum: String {
+    case backButtonImageName = "back"
+    case navigationTitle = "Detalhes"
+    case nameLabelText = "Nome"
+    case localNameLabelText = "Nome Local"
+    case dateLabelText = "Data"
+    
+}
+
 enum Key: String {
     case textColorKey = "textColor"
+}
+
+enum DictionaryKeys: String {
+    case code = "code"
+    case name = "name"
 }
 
 
