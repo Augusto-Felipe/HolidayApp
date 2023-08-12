@@ -84,7 +84,7 @@ extension HomeViewController: HomeViewModelProtocol {
     }
     
     func error() {
-        self.alert?.createAlert(title: "Erro", message: "Ano não suportado.")
+        self.alert?.createAlert(title: AlertTitle.alertErrorTitle.rawValue, message: AlertTitle.alertErrorMessage.rawValue)
     }
 }
 

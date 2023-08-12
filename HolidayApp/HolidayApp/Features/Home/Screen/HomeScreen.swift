@@ -22,14 +22,14 @@ class HomeScreen: UIView {
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "background")
+        imageView.image = UIImage(named: Home.backgroundImageName.rawValue)
         return imageView
     }()
     
     lazy var appLogoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "logo")
+        imageView.image = UIImage(named: Home.appLogoImageName.rawValue)
         return imageView
     }()
     
@@ -38,7 +38,7 @@ class HomeScreen: UIView {
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.layer.cornerRadius = 12
         pickerView.backgroundColor = .appDarkBlue
-        pickerView.setValue(UIColor.white, forKey: "textColor")
+        pickerView.setValue(UIColor.white, forKey: Key.textColorKey.rawValue)
         return pickerView
     }()
     
@@ -47,14 +47,14 @@ class HomeScreen: UIView {
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.layer.cornerRadius = 12
         pickerView.backgroundColor = .appDarkBlue
-        pickerView.setValue(UIColor.white, forKey: "textColor")
+        pickerView.setValue(UIColor.white, forKey: Key.textColorKey.rawValue)
         return pickerView
     }()
     
     lazy var searchButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Vamos", for: .normal)
+        button.setTitle(Home.searchButtonTitle.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .appDarkBlue

@@ -17,7 +17,7 @@ class Alert {
     
     public func createAlert(title: String, message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .cancel) { action in
+        let okButton = UIAlertAction(title: AlertTitle.alertButtonTitle.rawValue, style: .cancel) { action in
             completion?()
         }
         alert.addAction(okButton)

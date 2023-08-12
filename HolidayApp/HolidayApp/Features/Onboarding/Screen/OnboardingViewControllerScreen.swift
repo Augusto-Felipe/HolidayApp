@@ -22,7 +22,7 @@ class OnboardingViewControllerScreen: UIView {
     lazy var onboardImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "onboard")
+        imageView.image = UIImage(named: Onboarding.onboardingImageName.rawValue)
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -30,7 +30,7 @@ class OnboardingViewControllerScreen: UIView {
     lazy var appDescriptionLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = "Descubra os principais feriados de cada país"
+        lb.text = Onboarding.onboardingAppDescription.rawValue
         lb.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         lb.textColor = UIColor.black
         lb.numberOfLines = 0
@@ -41,11 +41,7 @@ class OnboardingViewControllerScreen: UIView {
     lazy var descriptionLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = """
-        Com o Holiday App você fica por dentro
-        dos principais feriados de mais de 100 países
-        diferentes
-        """
+        lb.text = Onboarding.onboardingDescription.rawValue
         lb.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         lb.textColor = UIColor.black
         lb.numberOfLines = 0
@@ -56,7 +52,7 @@ class OnboardingViewControllerScreen: UIView {
     lazy var letsStartButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Vamos", for: .normal)
+        button.setTitle(Onboarding.onboardingButtonTitle.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .appDarkBlue
