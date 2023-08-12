@@ -72,7 +72,7 @@ extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension HomeViewController: HomeScreenProtocol {
     func searchTapped() {
-        viewModel.fetchRequest(countryCode: selectedCountryCode, year: selectedYear)
+        viewModel.fetchRequest(countryCode: selectedCountryCode, year: selectedYear, requestType: .URLSession)
     }
 }
 

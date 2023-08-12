@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 enum NetWorkError: Error {
     case invalidURL(url: String)
@@ -51,6 +52,23 @@ class HomeService: NSObject {
             }
         }
         task.resume()
+    }
+    
+    func getHolidayListAlamofire(url: String ,completion: @escaping ([Holiday]?, Error?) -> Void) {
+        
+        AF.request(url, method: .get).validate().responseDecodable(of: [Holiday].self) { response in
+            
+            debugPrint(response)
+            
+            switch response.result {
+            case .success(let sucess):
+                print("SUCESS -> \(#function)")
+                completion(sucess, nil)
+            case .failure(let error):
+                print("ERROR -> \(#function)")
+                completion(nil, error)
+            }
+        }
     }
 }
 

@@ -12,6 +12,11 @@ protocol HomeViewModelProtocol: AnyObject {
     func error()
 }
 
+enum RequestType {
+    case URLSession
+    case Alamofire
+}
+
 class HomeViewModel {
     
     private var holidayList: [Holiday] = []
@@ -44,15 +49,30 @@ class HomeViewModel {
         }
     }
     
-    public func fetchRequest(countryCode: String, year: String) {
+    public func fetchRequest(countryCode: String, year: String, requestType: RequestType) {
         let urlString: String = "https://date.nager.at/api/v3/publicholidays/\(year)/\(countryCode)"
-        service.getHolidayList(urlString: urlString) { result in
-            switch result {
-            case .success(let holiday):
-                self.holidayList = holiday
-                self.delegate?.success()
-            case.failure(let error):
-                self.delegate?.error()
+        
+        
+        switch requestType {
+        case .Alamofire:
+            service.getHolidayListAlamofire(url: urlString) { holidayList, error in
+                if error != nil {
+                    self.delegate?.error()
+                } else {
+                    self.holidayList = holidayList ?? []
+                    self.delegate?.success()
+                }
+            }
+            
+        case .URLSession:
+            service.getHolidayList(urlString: urlString) { result in
+                switch result {
+                case .success(let holiday):
+                    self.holidayList = holiday
+                    self.delegate?.success()
+                case.failure(let error):
+                    self.delegate?.error()
+                }
             }
         }
     }
