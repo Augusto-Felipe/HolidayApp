@@ -20,38 +20,14 @@ class HomeService: NSObject {
     
     func getHolidayList(urlString: String, completion: @escaping (Result<[Holiday], NetWorkError>) -> Void) {
         
-        guard let url: URL = URL(string: urlString) else {
-            completion(.failure(.invalidURL(url: urlString)))
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            DispatchQueue.main.async {
-                if let error {
-                    print("Error: \(error.localizedDescription)")
-                    completion(.failure(.networkFailure(error)))
-                    return
-                }
-                
-                guard let dataResponse = data else {
-                    completion(.failure(.noData))
-                    return
-                }
-                
-                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    completion(.failure(.invalidResponse))
-                    return
-                }
-                
-                do {
-                    let holiday: [Holiday] = try JSONDecoder().decode([Holiday].self, from: dataResponse)
-                    completion(.success(holiday))
-                } catch {
-                    completion(.failure(.decodingError(error)))
-                }
+        ServiceManager.shared.request(with: urlString, method: .get, decodeType: [Holiday].self) { result in
+            switch result {
+            case .success(let success):
+                completion(.success(success))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
-        task.resume()
     }
     
     func getHolidayListAlamofire(url: String ,completion: @escaping ([Holiday]?, Error?) -> Void) {

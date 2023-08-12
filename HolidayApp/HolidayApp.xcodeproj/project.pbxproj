@@ -31,6 +31,7 @@
 		50BA7EA92A86CDE600EBA558 /* OnboardingViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA7EA82A86CDE600EBA558 /* OnboardingViewControllerScreen.swift */; };
 		50DD88D52A87CFED00AA13E4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DD88D42A87CFED00AA13E4 /* Strings.swift */; };
 		50DD88D82A87DC3E00AA13E4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 50DD88D72A87DC3E00AA13E4 /* Alamofire */; };
+		50DD88DB2A88137900AA13E4 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DD88DA2A88137900AA13E4 /* ServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		50BA7EA62A86CDD300EBA558 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		50BA7EA82A86CDE600EBA558 /* OnboardingViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerScreen.swift; sourceTree = "<group>"; };
 		50DD88D42A87CFED00AA13E4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		50DD88DA2A88137900AA13E4 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		5065E6A22A867CCE00D3B08C /* HolidayApp */ = {
 			isa = PBXGroup;
 			children = (
+				50DD88D92A88136400AA13E4 /* Service */,
 				50DD88D22A87CFBE00AA13E4 /* Utilities */,
 				5065E6B72A867EAC00D3B08C /* Resources */,
 				5065E6C32A868C8C00D3B08C /* Model */,
@@ -312,6 +315,14 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		50DD88D92A88136400AA13E4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				50DD88DA2A88137900AA13E4 /* ServiceManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,6 +410,7 @@
 				5065E6A82A867CCE00D3B08C /* HomeViewController.swift in Sources */,
 				5065E6E02A869C2000D3B08C /* HolidayViewModel.swift in Sources */,
 				5065E6DD2A8696B900D3B08C /* HolidayCollectionViewCellScreen.swift in Sources */,
+				50DD88DB2A88137900AA13E4 /* ServiceManager.swift in Sources */,
 				50BA7EA02A86B02100EBA558 /* HolidayDetailViewController.swift in Sources */,
 				5065E6DB2A86968900D3B08C /* HolidayCollectionViewCell.swift in Sources */,
 				50DD88D52A87CFED00AA13E4 /* Strings.swift in Sources */,
