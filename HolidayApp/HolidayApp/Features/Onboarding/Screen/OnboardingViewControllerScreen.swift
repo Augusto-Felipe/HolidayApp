@@ -23,7 +23,7 @@ class OnboardingViewControllerScreen: UIView {
     lazy var onboardImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: Onboarding.onboardingImageName.rawValue)
+        imageView.image = UIImage(named: OnboardingScreenEnum.onboardingImageName.rawValue)
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -32,7 +32,7 @@ class OnboardingViewControllerScreen: UIView {
         let lb = CLTypingLabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.charInterval = 0.07
-        lb.text = Onboarding.onboardingAppDescription.rawValue
+        lb.text = OnboardingScreenEnum.onboardingAppDescription.rawValue
         lb.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         lb.textColor = UIColor.black
         lb.onTypingAnimationFinished = {
@@ -48,7 +48,7 @@ class OnboardingViewControllerScreen: UIView {
     lazy var descriptionLabel: UILabel = {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.text = Onboarding.onboardingDescription.rawValue
+        lb.text = OnboardingScreenEnum.onboardingDescription.rawValue
         lb.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         lb.textColor = UIColor.black
         lb.alpha = 0
@@ -60,7 +60,7 @@ class OnboardingViewControllerScreen: UIView {
     lazy var letsStartButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(Onboarding.onboardingButtonTitle.rawValue, for: .normal)
+        button.setTitle(OnboardingScreenEnum.onboardingButtonTitle.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .appDarkBlue

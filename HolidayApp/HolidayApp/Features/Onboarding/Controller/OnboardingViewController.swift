@@ -7,6 +7,17 @@
 
 import UIKit
 
+enum OnboardingScreenEnum: String {
+    case onboardingImageName = "onboard"
+    case onboardingAppDescription = "Descubra os principais feriados de cada país"
+    case onboardingDescription = """
+    Com o Holiday App você fica por dentro dos
+    principais feriados de mais de 100 países
+    diferentes
+    """
+    case onboardingButtonTitle = "Vamos"
+}
+
 class OnboardingViewController: UIViewController {
     
     private lazy var screen: OnboardingViewControllerScreen = {

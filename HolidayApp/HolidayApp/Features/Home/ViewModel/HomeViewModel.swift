@@ -69,7 +69,7 @@ class HomeViewModel {
                 case .success(let holiday):
                     self.holidayList = holiday
                     self.delegate?.success()
-                case.failure(let error):
+                case.failure(_):
                     self.delegate?.error()
                 }
             }

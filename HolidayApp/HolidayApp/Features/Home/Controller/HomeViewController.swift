@@ -7,6 +7,21 @@
 
 import UIKit
 
+enum PickerViewKey: String {
+    case textColorKey = "textColor"
+}
+
+enum DictionaryKeys: String {
+    case code = "code"
+    case name = "name"
+}
+
+enum HomeScreenEnum: String {
+    case backgroundImageName = "background"
+    case appLogoImageName = "logo2"
+    case searchButtonTitle = "Pesquisar"
+}
+
 class HomeViewController: UIViewController {
     
     var selectedCountryCode: String = ""

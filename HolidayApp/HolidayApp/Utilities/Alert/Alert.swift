@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum AlertTitle: String {
+    case alertButtonTitle = "OK"
+    case alertErrorTitle = "Erro"
+    case alertErrorMessage = "Ano não suportado."
+}
+
 class Alert {
     
     private let controller: UIViewController?

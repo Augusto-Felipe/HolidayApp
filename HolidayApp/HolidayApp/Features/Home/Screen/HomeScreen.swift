@@ -38,7 +38,7 @@ class HomeScreen: UIView {
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.layer.cornerRadius = 12
         pickerView.backgroundColor = .appDarkBlue
-        pickerView.setValue(UIColor.white, forKey: Key.textColorKey.rawValue)
+        pickerView.setValue(UIColor.white, forKey: PickerViewKey.textColorKey.rawValue)
         return pickerView
     }()
     
@@ -47,7 +47,7 @@ class HomeScreen: UIView {
         pickerView.translatesAutoresizingMaskIntoConstraints = false
         pickerView.layer.cornerRadius = 12
         pickerView.backgroundColor = .appDarkBlue
-        pickerView.setValue(UIColor.white, forKey: Key.textColorKey.rawValue)
+        pickerView.setValue(UIColor.white, forKey: PickerViewKey.textColorKey.rawValue)
         return pickerView
     }()
     

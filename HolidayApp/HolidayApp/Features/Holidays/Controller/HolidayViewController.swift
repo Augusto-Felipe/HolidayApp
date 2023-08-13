@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum HolidayScreenEnum: String {
+    case backButonImageName = "back"
+    case navigationTitle = "Feriados"
+}
+
 class HolidayViewController: UIViewController {
     
     var viewModel: HolidayViewModel = HolidayViewModel()

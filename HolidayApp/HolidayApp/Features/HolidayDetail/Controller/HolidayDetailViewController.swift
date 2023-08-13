@@ -7,6 +7,15 @@
 
 import UIKit
 
+enum DetailScreenEnum: String {
+    case backButtonImageName = "back"
+    case navigationTitle = "Detalhes"
+    case nameLabelText = "Nome"
+    case localNameLabelText = "Nome Local"
+    case dateLabelText = "Data"
+    
+}
+
 class HolidayDetailViewController: UIViewController {
     
     var holiday: Holiday
