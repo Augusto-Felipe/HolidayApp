@@ -15,6 +15,7 @@ enum OnboardingScreenEnum: String {
     principais feriados de mais de 100 países
     diferentes
     """
+    case userDefaultsOnboardingKey = "onboarding"
     case onboardingButtonTitle = "Vamos"
 }
 
@@ -33,6 +34,7 @@ class OnboardingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set(true, forKey: OnboardingScreenEnum.userDefaultsOnboardingKey.rawValue)
         self.screen.delegate(delegate: self)
         self.screen.onboardImageView.alpha = 0
     }
