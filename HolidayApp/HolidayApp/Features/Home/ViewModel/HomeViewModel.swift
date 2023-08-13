@@ -50,11 +50,10 @@ class HomeViewModel {
     }
     
     public func fetchRequest(countryCode: String, year: String, requestType: RequestType) {
-        let urlString: String = "https://date.nager.at/api/v3/publicholidays/\(year)/\(countryCode)"
         
         switch requestType {
         case .Alamofire:
-            service.getHolidayListAlamofire(url: urlString) { holidayList, error in
+            service.getHolidayListAlamofire(year: year, countryCode: countryCode) { holidayList, error in
                 if error != nil {
                     self.delegate?.error()
                 } else {
@@ -64,7 +63,7 @@ class HomeViewModel {
             }
             
         case .URLSession:
-            service.getHolidayList(urlString: urlString) { result in
+            service.getHolidayList(year: year, countryCode: countryCode) { result in
                 switch result {
                 case .success(let holiday):
                     self.holidayList = holiday

@@ -18,7 +18,8 @@ enum NetWorkError: Error {
 
 class HomeService: NSObject {
     
-    func getHolidayList(urlString: String, completion: @escaping (Result<[Holiday], NetWorkError>) -> Void) {
+    func getHolidayList(year: String, countryCode: String, completion: @escaping (Result<[Holiday], NetWorkError>) -> Void) {
+        let urlString: String = "https://date.nager.at/api/v3/publicholidays/\(year)/\(countryCode)"
         
         ServiceManager.shared.request(with: urlString, method: .get, decodeType: [Holiday].self) { result in
             switch result {
@@ -30,9 +31,10 @@ class HomeService: NSObject {
         }
     }
     
-    func getHolidayListAlamofire(url: String ,completion: @escaping ([Holiday]?, Error?) -> Void) {
+    func getHolidayListAlamofire(year: String, countryCode: String, completion: @escaping ([Holiday]?, Error?) -> Void) {
+        let urlString: String = "https://date.nager.at/api/v3/publicholidays/\(year)/\(countryCode)"
         
-        AF.request(url, method: .get).validate().responseDecodable(of: [Holiday].self) { response in
+        AF.request(urlString, method: .get).validate().responseDecodable(of: [Holiday].self) { response in
             
             debugPrint(response)
             
