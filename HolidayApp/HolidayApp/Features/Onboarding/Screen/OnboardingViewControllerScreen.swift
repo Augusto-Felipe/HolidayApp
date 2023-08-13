@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 protocol OnboardingViewControllerScreenProtocol: AnyObject {
     func startTapped()
@@ -27,12 +28,16 @@ class OnboardingViewControllerScreen: UIView {
         return imageView
     }()
     
-    lazy var appDescriptionLabel: UILabel = {
-        let lb = UILabel()
+    lazy var appDescriptionLabel: CLTypingLabel = {
+        let lb = CLTypingLabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = Onboarding.onboardingAppDescription.rawValue
         lb.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         lb.textColor = UIColor.black
+        lb.charInterval = 0.1
+        lb.onTypingAnimationFinished = {
+            self.descriptionLabel.isHidden = false
+        }
         lb.numberOfLines = 0
         lb.textAlignment = .center
         return lb
@@ -45,6 +50,7 @@ class OnboardingViewControllerScreen: UIView {
         lb.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         lb.textColor = UIColor.black
         lb.numberOfLines = 0
+        lb.isHidden = true
         lb.textAlignment = .center
         return lb
     }()

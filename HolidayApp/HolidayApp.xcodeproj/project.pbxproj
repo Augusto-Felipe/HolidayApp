@@ -32,9 +32,11 @@
 		50DD88D52A87CFED00AA13E4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DD88D42A87CFED00AA13E4 /* Strings.swift */; };
 		50DD88D82A87DC3E00AA13E4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 50DD88D72A87DC3E00AA13E4 /* Alamofire */; };
 		50DD88DB2A88137900AA13E4 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DD88DA2A88137900AA13E4 /* ServiceManager.swift */; };
+		7F44520093DA0B9149AE00C1 /* Pods_HolidayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DB3E4D710FDA5CAA9795C0 /* Pods_HolidayApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20DB3E4D710FDA5CAA9795C0 /* Pods_HolidayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HolidayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5065E6A02A867CCE00D3B08C /* HolidayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5065E6A32A867CCE00D3B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5065E6A52A867CCE00D3B08C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,8 @@
 		50BA7EA82A86CDE600EBA558 /* OnboardingViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerScreen.swift; sourceTree = "<group>"; };
 		50DD88D42A87CFED00AA13E4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		50DD88DA2A88137900AA13E4 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		A83F52EA734308055E6B7EF6 /* Pods-HolidayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayApp.release.xcconfig"; path = "Target Support Files/Pods-HolidayApp/Pods-HolidayApp.release.xcconfig"; sourceTree = "<group>"; };
+		B7154F65D07AD721E93AA7A5 /* Pods-HolidayApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayApp.debug.xcconfig"; path = "Target Support Files/Pods-HolidayApp/Pods-HolidayApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50DD88D82A87DC3E00AA13E4 /* Alamofire in Frameworks */,
+				7F44520093DA0B9149AE00C1 /* Pods_HolidayApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,8 @@
 			children = (
 				5065E6A22A867CCE00D3B08C /* HolidayApp */,
 				5065E6A12A867CCE00D3B08C /* Products */,
+				850C5D007B525941AC3FC407 /* Pods */,
+				51B47B7204BAC791F738C964 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,6 +330,24 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		51B47B7204BAC791F738C964 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20DB3E4D710FDA5CAA9795C0 /* Pods_HolidayApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		850C5D007B525941AC3FC407 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7154F65D07AD721E93AA7A5 /* Pods-HolidayApp.debug.xcconfig */,
+				A83F52EA734308055E6B7EF6 /* Pods-HolidayApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,9 +355,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5065E6B42A867CCF00D3B08C /* Build configuration list for PBXNativeTarget "HolidayApp" */;
 			buildPhases = (
+				0FF1C32CBAEC9304ED431EAA /* [CP] Check Pods Manifest.lock */,
 				5065E69C2A867CCE00D3B08C /* Sources */,
 				5065E69D2A867CCE00D3B08C /* Frameworks */,
 				5065E69E2A867CCE00D3B08C /* Resources */,
+				52B84D6EBAF3A1B11799490F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -371,7 +398,7 @@
 			);
 			mainGroup = 5065E6972A867CCE00D3B08C;
 			packageReferences = (
-				50DD88D62A87DC3E00AA13E4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				50DD88D62A87DC3E00AA13E4 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
 			);
 			productRefGroup = 5065E6A12A867CCE00D3B08C /* Products */;
 			projectDirPath = "";
@@ -393,6 +420,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FF1C32CBAEC9304ED431EAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HolidayApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52B84D6EBAF3A1B11799490F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HolidayApp/Pods-HolidayApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HolidayApp/Pods-HolidayApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HolidayApp/Pods-HolidayApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5065E69C2A867CCE00D3B08C /* Sources */ = {
@@ -554,6 +623,7 @@
 		};
 		5065E6B52A867CCF00D3B08C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7154F65D07AD721E93AA7A5 /* Pods-HolidayApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -583,6 +653,7 @@
 		};
 		5065E6B62A867CCF00D3B08C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A83F52EA734308055E6B7EF6 /* Pods-HolidayApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -634,7 +705,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		50DD88D62A87DC3E00AA13E4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		50DD88D62A87DC3E00AA13E4 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -647,7 +718,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		50DD88D72A87DC3E00AA13E4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 50DD88D62A87DC3E00AA13E4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 50DD88D62A87DC3E00AA13E4 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
