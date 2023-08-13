@@ -45,10 +45,25 @@ class HolidayDetailViewController: UIViewController {
         configSuperView()
     }
     
+    func convertDateToBrazilianFormat(dateString: String) -> String? {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd"
+        
+        if let date = inputFormatter.date(from: dateString) {
+            let outputFormatter = DateFormatter()
+            outputFormatter.dateFormat = "dd/MM/yyyy"
+            return outputFormatter.string(from: date)
+        } else {
+            return nil
+        }
+    }
+    
     public func configSuperView() {
         self.screen.nameDescriptionLabel.text = holiday.name
         self.screen.localNameDescriptionLabel.text = holiday.localName
-        self.screen.dateDescriptionLabel.text = holiday.date
+        if let dateFormated = convertDateToBrazilianFormat(dateString: holiday.date) {
+            self.screen.dateDescriptionLabel.text = dateFormated
+        }
     }
 }
 
