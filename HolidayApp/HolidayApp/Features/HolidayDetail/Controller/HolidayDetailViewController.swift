@@ -13,7 +13,6 @@ enum DetailScreenEnum: String {
     case nameLabelText = "Nome"
     case localNameLabelText = "Nome Local"
     case dateLabelText = "Data"
-    
 }
 
 class HolidayDetailViewController: UIViewController {

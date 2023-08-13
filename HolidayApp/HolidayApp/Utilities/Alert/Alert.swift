@@ -14,7 +14,6 @@ enum AlertTitle: String {
 }
 
 class Alert {
-    
     private let controller: UIViewController?
     
     init(controller: UIViewController?) {
