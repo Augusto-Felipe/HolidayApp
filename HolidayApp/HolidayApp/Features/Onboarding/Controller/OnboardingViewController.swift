@@ -23,6 +23,13 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.screen.delegate(delegate: self)
+        self.screen.onboardImageView.alpha = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 1.0) {
+            self.screen.onboardImageView.alpha = 1
+        }
     }
 }
 

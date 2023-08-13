@@ -31,12 +31,14 @@ class OnboardingViewControllerScreen: UIView {
     lazy var appDescriptionLabel: CLTypingLabel = {
         let lb = CLTypingLabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.charInterval = 0.07
         lb.text = Onboarding.onboardingAppDescription.rawValue
         lb.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         lb.textColor = UIColor.black
-        lb.charInterval = 0.1
         lb.onTypingAnimationFinished = {
-            self.descriptionLabel.isHidden = false
+            UIView.animate(withDuration: 1.0) {
+                self.descriptionLabel.alpha = 1
+            }
         }
         lb.numberOfLines = 0
         lb.textAlignment = .center
@@ -49,8 +51,8 @@ class OnboardingViewControllerScreen: UIView {
         lb.text = Onboarding.onboardingDescription.rawValue
         lb.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         lb.textColor = UIColor.black
+        lb.alpha = 0
         lb.numberOfLines = 0
-        lb.isHidden = true
         lb.textAlignment = .center
         return lb
     }()
@@ -93,7 +95,7 @@ class OnboardingViewControllerScreen: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             onboardImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            onboardImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -50),
+            onboardImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -100),
             onboardImageView.heightAnchor.constraint(equalToConstant: 340),
             onboardImageView.widthAnchor.constraint(equalToConstant: 230),
             
