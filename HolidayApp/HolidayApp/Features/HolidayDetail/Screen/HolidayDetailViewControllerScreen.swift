@@ -13,7 +13,7 @@ protocol HolidayDetailViewControllerScreenProtocol: AnyObject {
 
 class HolidayDetailViewControllerScreen: UIView {
 
-    var delegate: HolidayDetailViewControllerScreenProtocol?
+    private weak var delegate: HolidayDetailViewControllerScreenProtocol?
     
     public func delegate(delegate: HolidayDetailViewControllerScreenProtocol) {
         self.delegate = delegate

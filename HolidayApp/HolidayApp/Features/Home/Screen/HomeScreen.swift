@@ -13,7 +13,7 @@ protocol HomeScreenProtocol: AnyObject {
 
 class HomeScreen: UIView {
     
-    var delegate: HomeScreenProtocol?
+    private weak var delegate: HomeScreenProtocol?
     
     public func delegate(delegate: HomeScreenProtocol) {
         self.delegate = delegate

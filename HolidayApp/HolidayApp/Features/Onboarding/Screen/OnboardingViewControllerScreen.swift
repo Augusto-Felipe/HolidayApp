@@ -14,7 +14,7 @@ protocol OnboardingViewControllerScreenProtocol: AnyObject {
 
 class OnboardingViewControllerScreen: UIView {
     
-    var delegate: OnboardingViewControllerScreenProtocol?
+    private weak var delegate: OnboardingViewControllerScreenProtocol?
     
     public func delegate(delegate: OnboardingViewControllerScreenProtocol) {
         self.delegate = delegate

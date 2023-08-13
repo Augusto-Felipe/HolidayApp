@@ -22,7 +22,7 @@ class HomeViewModel {
     private var holidayList: [Holiday] = []
     private var service: HomeService = HomeService()
     
-    var delegate: HomeViewModelProtocol?
+    private weak var delegate: HomeViewModelProtocol?
     
     public func delegate(delegate: HomeViewModelProtocol) {
         self.delegate = delegate
