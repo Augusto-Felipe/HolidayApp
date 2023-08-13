@@ -20,6 +20,7 @@ enum RequestType {
 class HomeViewModel {
     
     private var holidayList: [Holiday] = []
+    private var countryList: [Country] = []
     private var service: HomeService = HomeService()
     
     private weak var delegate: HomeViewModelProtocol?
@@ -32,25 +33,35 @@ class HomeViewModel {
         return holidayList
     }
     
+    public func getCountryCode(row: Int) -> String {
+        return countryList[row].code
+    }
+    
     public var numberOfComponents: Int {
         return 2
     }
     
     public var numberOfRowsInComponent: Int {
-        return CountryData.countriesData.count
+        return countryList.count
+    }
+    
+    func configPickerViewYears() -> [String] {
+        let currentYear = Calendar.current.component(.year, from: Date())
+        let startYear = currentYear - 55
+        let endYear = currentYear + 55
+        return (startYear...endYear).map { String($0) }
     }
     
     public func titleForRow(pickerView: UIPickerView, row: Int, component: Int) -> String? {
         if component == 0 {
-            let selectedCountryData = CountryData.countriesData[row]
-            return selectedCountryData[DictionaryKeys.name.rawValue]
+            let selectedCountryData = countryList[row].name
+            return selectedCountryData
         } else {
-            return CountryData.years[row]
+            return configPickerViewYears()[row]
         }
     }
     
     public func fetchRequest(countryCode: String, year: String, requestType: RequestType) {
-        
         switch requestType {
         case .Alamofire:
             service.getHolidayListAlamofire(year: year, countryCode: countryCode) { holidayList, error in
@@ -71,6 +82,16 @@ class HomeViewModel {
                 case.failure(_):
                     self.delegate?.error()
                 }
+            }
+        }
+    }
+    
+    public func getDataFromJSON() {
+        service.getCountryDataJson { result, error in
+            if error != nil {
+                
+            } else {
+                self.countryList = result ?? []
             }
         }
     }

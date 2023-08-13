@@ -48,5 +48,17 @@ class HomeService: NSObject {
             }
         }
     }
+    
+    func getCountryDataJson(completion: @escaping ([Country]?, Error?) -> Void) {
+        if let url = Bundle.main.url(forResource: "CountriesData", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let countriesData: [Country] = try JSONDecoder().decode([Country].self, from: data)
+                completion(countriesData, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
 }
 

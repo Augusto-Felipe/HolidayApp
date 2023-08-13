@@ -47,6 +47,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel.getDataFromJSON()
         self.alert = Alert(controller: self)
         self.viewModel.delegate(delegate: self)
         self.screen.delegate(delegate: self)
@@ -54,12 +55,19 @@ class HomeViewController: UIViewController {
         configureInitialSelectedValues()
     }
     
+    func configPickerViewYears() -> [String] {
+        let currentYear = Calendar.current.component(.year, from: Date())
+        let startYear = currentYear - 55
+        let endYear = currentYear + 55
+        return (startYear...endYear).map { String($0) }
+    }
+    
     func configureInitialSelectedValues() {
         let initialCountryRow = screen.countryPickerView.selectedRow(inComponent: 0)
-        selectedCountryCode = CountryData.countriesData[initialCountryRow][DictionaryKeys.code.rawValue] ?? ""
+        selectedCountryCode = viewModel.getCountryCode(row: initialCountryRow)
         
         let initialYearRow = screen.yearPickerView.selectedRow(inComponent: 0)
-        selectedYear = CountryData.years[initialYearRow]
+        selectedYear = viewModel.configPickerViewYears()[initialYearRow]
     }
 }
 
@@ -77,10 +85,13 @@ extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if component == 0 {
-            selectedCountryCode = CountryData.countriesData[row][DictionaryKeys.code.rawValue] ?? ""
-        } else if component == 1 {
-            selectedYear = CountryData.years[row]
+        switch component {
+        case 0:
+            selectedCountryCode = viewModel.getCountryCode(row: row)
+        case 1:
+            selectedYear = viewModel.configPickerViewYears()[row]
+        default:
+            break
         }
     }
 }
