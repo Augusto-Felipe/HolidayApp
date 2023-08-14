@@ -32,7 +32,6 @@
 		50C4E8AF2A898941003B3616 /* CountriesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 50C4E8AE2A898941003B3616 /* CountriesData.json */; };
 		50C4E8B12A898C62003B3616 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4E8B02A898C62003B3616 /* Country.swift */; };
 		50DD88D82A87DC3E00AA13E4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 50DD88D72A87DC3E00AA13E4 /* Alamofire */; };
-		50DD88DB2A88137900AA13E4 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DD88DA2A88137900AA13E4 /* ServiceManager.swift */; };
 		7F44520093DA0B9149AE00C1 /* Pods_HolidayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DB3E4D710FDA5CAA9795C0 /* Pods_HolidayApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +63,6 @@
 		50C315772A89CEB800F25F1B /* HolidayDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayDetailViewModel.swift; sourceTree = "<group>"; };
 		50C4E8AE2A898941003B3616 /* CountriesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CountriesData.json; sourceTree = "<group>"; };
 		50C4E8B02A898C62003B3616 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		50DD88DA2A88137900AA13E4 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		A83F52EA734308055E6B7EF6 /* Pods-HolidayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayApp.release.xcconfig"; path = "Target Support Files/Pods-HolidayApp/Pods-HolidayApp.release.xcconfig"; sourceTree = "<group>"; };
 		B7154F65D07AD721E93AA7A5 /* Pods-HolidayApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HolidayApp.debug.xcconfig"; path = "Target Support Files/Pods-HolidayApp/Pods-HolidayApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				50C4E8AD2A8988EE003B3616 /* Mock */,
-				50DD88D92A88136400AA13E4 /* Service */,
 				50DD88D22A87CFBE00AA13E4 /* Utilities */,
 				5065E6B72A867EAC00D3B08C /* Resources */,
 				5065E6C32A868C8C00D3B08C /* Model */,
@@ -333,14 +330,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		50DD88D92A88136400AA13E4 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				50DD88DA2A88137900AA13E4 /* ServiceManager.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		51B47B7204BAC791F738C964 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,7 +478,6 @@
 				5065E6A82A867CCE00D3B08C /* HomeViewController.swift in Sources */,
 				5065E6E02A869C2000D3B08C /* HolidayViewModel.swift in Sources */,
 				5065E6DD2A8696B900D3B08C /* HolidayCollectionViewCellScreen.swift in Sources */,
-				50DD88DB2A88137900AA13E4 /* ServiceManager.swift in Sources */,
 				50BA7EA02A86B02100EBA558 /* HolidayDetailViewController.swift in Sources */,
 				5065E6DB2A86968900D3B08C /* HolidayCollectionViewCell.swift in Sources */,
 				50BA7EA92A86CDE600EBA558 /* OnboardingViewControllerScreen.swift in Sources */,

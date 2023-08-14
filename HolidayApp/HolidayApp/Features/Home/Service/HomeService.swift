@@ -21,14 +21,41 @@ class HomeService: NSObject {
     func getHolidayList(year: String, countryCode: String, completion: @escaping (Result<[Holiday], NetWorkError>) -> Void) {
         let urlString: String = "https://date.nager.at/api/v3/publicholidays/\(year)/\(countryCode)"
         
-        ServiceManager.shared.request(with: urlString, method: .get, decodeType: [Holiday].self) { result in
-            switch result {
-            case .success(let success):
-                completion(.success(success))
-            case .failure(let error):
-                completion(.failure(error))
+        guard let url: URL = URL(string: urlString) else {
+            completion(.failure(.invalidURL(url: urlString)))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                
+                guard let dataResult = data else {
+                    completion(.failure(.noData))
+                    return
+                }
+                
+                guard let response = response as? HTTPURLResponse else { return }
+                
+                if response.statusCode == 200 {
+                    do {
+                        let holidayData: [Holiday] = try JSONDecoder().decode([Holiday].self, from: dataResult)
+                        print("SUCESS -> \(#function)")
+                        completion(.success(holidayData))
+                    } catch {
+                        print("ERROR -> \(#function)")
+                        completion(.failure(.decodingError(error)))
+                    }
+                } else {
+                    print("ERROR -> \(#function)")
+                    completion(.failure(.invalidResponse))
+                }
             }
         }
+        
+        task.resume()
     }
     
     func getHolidayListAlamofire(year: String, countryCode: String, completion: @escaping ([Holiday]?, Error?) -> Void) {
