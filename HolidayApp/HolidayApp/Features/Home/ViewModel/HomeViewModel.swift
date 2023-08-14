@@ -53,7 +53,7 @@ class HomeViewModel {
     }
     
     public func titleForRow(pickerView: UIPickerView, row: Int, component: Int) -> String? {
-        if component == 0 {
+        if component == .zero {
             let selectedCountryData = countryList[row].name
             return selectedCountryData
         } else {

@@ -20,6 +20,7 @@ enum HomeScreenEnum: String {
     case backgroundImageName = "background"
     case appLogoImageName = "logo2"
     case searchButtonTitle = "Pesquisar"
+    case loadingMessage = "carregando..."
 }
 
 class HomeViewController: UIViewController {
@@ -100,7 +101,7 @@ extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension HomeViewController: HomeScreenProtocol {
     func searchTapped() {
-        loading?.showLoading(message: "carregando...")
+        loading?.showLoading(message: HomeScreenEnum.loadingMessage.rawValue)
         viewModel.fetchRequest(countryCode: selectedCountryCode, year: selectedYear, requestType: .URLSession)
     }
 }
