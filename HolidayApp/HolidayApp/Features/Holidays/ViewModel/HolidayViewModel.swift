@@ -9,7 +9,7 @@ import UIKit
 
 class HolidayViewModel: UIView {
     
-    var holidayList: [Holiday]
+    private var holidayList: [Holiday]
     
     init(holidayList: [Holiday]) {
         self.holidayList = holidayList

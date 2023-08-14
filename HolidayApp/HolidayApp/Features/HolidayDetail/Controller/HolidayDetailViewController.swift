@@ -17,10 +17,10 @@ enum DetailScreenEnum: String {
 
 class HolidayDetailViewController: UIViewController {
     
-    var holiday: Holiday
+    var viewModel: HolidayDetailViewModel
     
     init(holiday: Holiday) {
-        self.holiday = holiday
+        self.viewModel = HolidayDetailViewModel(holiday: holiday)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,7 +42,7 @@ class HolidayDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.screen.delegate(delegate: self)
-        configSuperView()
+        configHolidayDetail()
     }
     
     func convertDateToBrazilianFormat(dateString: String) -> String? {
@@ -58,10 +58,10 @@ class HolidayDetailViewController: UIViewController {
         }
     }
     
-    public func configSuperView() {
-        self.screen.nameDescriptionLabel.text = holiday.name
-        self.screen.localNameDescriptionLabel.text = holiday.localName
-        if let dateFormated = convertDateToBrazilianFormat(dateString: holiday.date) {
+    public func configHolidayDetail() {
+        self.screen.nameDescriptionLabel.text = viewModel.getHolidayName()
+        self.screen.localNameDescriptionLabel.text = viewModel.getHolidayLocalName()
+        if let dateFormated = convertDateToBrazilianFormat(dateString: viewModel.getHolidayDate()) {
             self.screen.dateDescriptionLabel.text = dateFormated
         }
     }
