@@ -8,18 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
-    func pin(to superView: UIView) {
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.topAnchor),
-            leadingAnchor.constraint(equalTo: superView.leadingAnchor),
-            trailingAnchor.constraint(equalTo: superView.trailingAnchor),
-            bottomAnchor.constraint(equalTo: superView.bottomAnchor),
-        ])
-    }
-    
+extension UIView {    
     func setCardShadow() {
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.3
