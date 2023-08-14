@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     
     var selectedCountryCode: String = ""
     var selectedYear: String = ""
+    var loading: Loading?
     
     private lazy var screen: HomeScreen = {
         let screen = HomeScreen()
@@ -47,6 +48,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loading = Loading(viewController: self)
         self.viewModel.getDataFromJSON()
         self.alert = Alert(controller: self)
         self.viewModel.delegate(delegate: self)
@@ -98,17 +100,20 @@ extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension HomeViewController: HomeScreenProtocol {
     func searchTapped() {
+        loading?.showLoading(message: "carregando...")
         viewModel.fetchRequest(countryCode: selectedCountryCode, year: selectedYear, requestType: .URLSession)
     }
 }
 
 extension HomeViewController: HomeViewModelProtocol {
     func success() {
+        loading?.hideLoading()
         let vc = HolidayViewController(holidayList: viewModel.getHolidays())
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func error() {
+        loading?.hideLoading()
         self.alert?.createAlert(title: AlertTitle.alertErrorTitle.rawValue, message: AlertTitle.alertErrorMessage.rawValue)
     }
 }
