@@ -14,7 +14,16 @@ enum HolidayScreenEnum: String {
 
 class HolidayViewController: UIViewController {
     
-    var viewModel: HolidayViewModel = HolidayViewModel()
+    var viewModel: HolidayViewModel
+    
+    init(holidayList: [Holiday]) {
+        self.viewModel = HolidayViewModel(holidayList: holidayList)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private lazy var screen: HolidayScreen = {
         let screen = HolidayScreen()

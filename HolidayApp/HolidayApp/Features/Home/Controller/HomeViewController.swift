@@ -104,8 +104,7 @@ extension HomeViewController: HomeScreenProtocol {
 
 extension HomeViewController: HomeViewModelProtocol {
     func success() {
-        let vc = HolidayViewController()
-        vc.viewModel.holidayList = viewModel.getHolidays()
+        let vc = HolidayViewController(holidayList: viewModel.getHolidays())
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

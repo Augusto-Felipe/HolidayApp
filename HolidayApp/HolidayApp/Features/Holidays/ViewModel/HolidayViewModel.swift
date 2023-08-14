@@ -9,8 +9,17 @@ import UIKit
 
 class HolidayViewModel: UIView {
     
-    var holidayList: [Holiday] = []
-
+    var holidayList: [Holiday]
+    
+    init(holidayList: [Holiday]) {
+        self.holidayList = holidayList
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public func sizeForItemAt(collection: UICollectionView) -> CGSize {
         return CGSize(width: collection.bounds.width - 25, height: 100)
     }
