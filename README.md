@@ -15,6 +15,13 @@ O Holiday App é a sua ferramenta essencial para acompanhar os feriados em todo 
   <img src="https://github.com/Augusto-Felipe/HolidayApp/assets/107811979/c35ab4b9-96d5-408e-8818-2ddcdeac84a0" width="300" />
 </p>
 
+# Principais recursos
+- Pesquisa de Feriados: Os usuários podem selecionar um país e um ano específico para visualizar uma lista de feriados nacionais e locais.
+
+- Detalhes de Feriados: Cada feriado listado exibe informações detalhadas, incluindo a data exata, o nome do feriado, e a descrição .
+
+- Interface Intuitiva: O aplicativo possui uma interface de usuário intuitiva, tornando a pesquisa de feriados fácil e acessível.
+
 # Descriçao do Desenvolvimento
 <p align="center">
   <img src="https://github.com/Augusto-Felipe/HolidayApp/assets/107811979/7c6f3333-02fc-4001-a840-df1087fe7c18" alt="Descrição da imagem" />
